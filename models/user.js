@@ -9,7 +9,6 @@ const UserSchema = new Schema(
       unique: true,
       required: true,
     },
-
     username: {
       type: String,
       required: true,
@@ -20,7 +19,7 @@ const UserSchema = new Schema(
       required: true,
       unique: true,
     },
-    fullName: {
+    fullname: {
       type: String,
     },
     phoneNumber: {
