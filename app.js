@@ -33,6 +33,8 @@ app.use(
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({ mongoUrl: "mongodb://127.0.0.1/signApp" }),
+ 
+    // mongoose.connect("mongodb://localhost:27017/demoDb");
   })
 );
 /*
@@ -62,6 +64,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
@@ -69,6 +72,9 @@ app.use("/users", usersRouter);
 app.get("/register", function (req, res) {
   res.render("signup");
 });
+// app.get("/hello", function (req, res) {
+//   res.render("learn");
+// });
 
 app.post("/register", async function (req, res) {
   try {

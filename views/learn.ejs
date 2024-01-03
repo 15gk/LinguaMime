@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500&display=swap" rel="stylesheet" />
+
+    <script src="libraries/p5.js"></script>
+    <script src="libraries/p5.dom.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="javascripts/script.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <style></style>
+</head>
+
+<body>
+    
+    <div class="container-fluid">
+        <div class="container-fluid" style="width: 100%">
+            <div class="jumbotron">
+                <button type="button" placeholder="Hello" name="Hello" id="train" onclick=""
+                    style="align-items: baseline;">Hello</button>
+                <button type="button" placeholder="Power" name="Power" id="train" onclick=""
+                    style="align-items: baseline;">Power</button>
+                <button type="button" placeholder="ok" name="Power" id="ok" onclick=""
+                        style="align-items: baseline;">OK</button>
+                                <!-- E: "Thumps up",
+                                F: "Thump down",
+                                G: "I love you",
+                                H: "rock",
+                                I: "call me",
+                                J: "Bang bang", --> 
+                <button type="button" placeholder="Peace" name="Peace" id="Peace" onclick="" style="align-items: baseline;">Peace</button>
+                <button type="button" placeholder="Thumps up" name="Thumps up" id="Thumps up" onclick="" style="align-items: baseline;">Thumps up</button>
+                <button type="button" placeholder="Thump down" name="Thump down" id="Thump down" onclick="" style="align-items: baseline;">Thump down</button>
+                <button type="button" placeholder="I love you" name="I love you" id="I love you" onclick="" style="align-items: baseline;">I love you</button>
+                <button type="button" placeholder="rock" name="rock" id="rock" onclick=""
+                        style="align-items: baseline;">rock</button>
+                <button type="button" placeholder="call me" name="call me" id="call me" onclick="" style="align-items: baseline;">call me</button>
+                <button type="button" placeholder="Bang bang" name="Bang bang" id="Bang bang" onclick="" style="align-items: baseline;">Bang bang</button>
+            </div>
+        </div>
+     
+        <div class="container-fluid">
+            <div id="canvasContainer">
+                <div class="info">
+                    <h2 style="text-align: center; margin: 1rem">Prediction</h2>
+                    <h6 style="margin-left: 1rem; text-align: center">
+                        Currently available Gestures - A || B || C || D
+                    </h6>
+                    <h1 id="res">A</h1>
+                    <div class="score" style="margin-left: 1.5rem">
+                        Confidence: <span id="confidence"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

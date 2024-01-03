@@ -6,5 +6,8 @@ router.get('/', function(req, res, next) {
   // res.render('sign', { title: 'Express' });
    res.render('sign');
 });
-
+router.get("/hello", function (req, res, next) {
+  // res.render('sign', { title: 'Express' });
+  res.render("learn");
+});
 module.exports = router;
