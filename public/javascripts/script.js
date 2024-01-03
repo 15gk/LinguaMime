@@ -33,6 +33,7 @@ function displayResult(result) {
     J: "Bang bang",
   };
   console.log(result[0].label);
+  console.log(result)
   // Get the gesture corresponding to the label
   const gesture = gestureMapping[result[0].label];
 
@@ -146,7 +147,7 @@ function classifyGesture() {
       inputs.push(z);
     }
     nn.classify(inputs, gotResults);
-    // console.log(gotResults)
+    console.log(gotResults)
   } else {
     setTimeout(classifyGesture, 100);
   }
