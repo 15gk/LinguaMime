@@ -69,6 +69,24 @@
                 max-width: 100%;
                 height: auto;
                 margin-top: 20px;
+                animation: slideDownAnimation 1s ease-in-out forwards;
+                /* Animation for slide down */
+            }
+
+            @keyframes slideDownAnimation {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                    /* Move the element upward */
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                    /* Element returns to its original position */
+                }
+
+                /* Adjust the animation duration */
             }
 
             h1 {
@@ -79,37 +97,7 @@
                 font-family: "Libre Baskerville", serif;
             }
 
-            .about-container {
-                text-align: center;
-                margin: 50px auto;
-                max-width: 600px;
-                color: #886161;
-                font-family: "Libre Baskerville", serif;
-                transition: 0.3s;
-                animation-name: slideLeftRight;
-                /* Name of the animation */
-                animation-duration: 12s;
-                /* Duration of the animation */
-                animation-timing-function: ease-in-out;
-                /* Timing for smooth motion */
-                animation-iteration-count: infinite;
-                /* Make the animation infinite/continuous */
-            }
 
-            /* Define the keyframes for the animation */
-            @keyframes slideLeftRight {
-
-                0%,
-                100% {
-                    transform: translateX(0);
-                    /* Starting and ending position */
-                }
-
-                50% {
-                    transform: translateX(200px);
-                    /* Middle position (move right) */
-                }
-            }
 
             .about-container {
                 text-align: center;
@@ -117,32 +105,13 @@
                 max-width: 600px;
                 color: #886161;
                 font-family: "Libre Baskerville", serif;
-                transition: 0.3s;
-                animation-name: slideLeftRight;
-                animation-duration: 12s;
-                animation-timing-function: ease-in-out;
-                animation-iteration-count: infinite;
+
+
             }
 
-            /* Define the keyframes for the animation */
-            @keyframes slideLeftRight {
 
-                0%,
-                100% {
-                    transform: translateX(0);
-                }
 
-                50% {
-                    transform: translateX(200px);
-                }
-            }
 
-            /* Additional styles for your HTML structure */
-            .about-image {
-                max-width: 100%;
-                height: auto;
-                margin-top: 20px;
-            }
 
             h1 {
                 font-family: "Libre Baskerville", serif;
@@ -218,12 +187,19 @@
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/profile">Profile</a></li>
+            <li><a href="/lobby">Videochat</a></li>
             <li class="login-link"><a href="/logout">Logout</a></li>
         </ul>
     </nav>
+    <link />
+
+    <!-- Your HTML content -->
     <div class="about-container">
         <h1>About Us</h1>
-        <img class="about-image" src="images/about.png" alt="About Us Image" />
+        <img class="about-image animate__animated animate__slideInDown" src="images/about.png" alt="About Us Image" />
+    </div>
+
+
     </div>
     <footer class="footer">
         <div class="section">

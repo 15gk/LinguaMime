@@ -30,7 +30,7 @@ function displayResult(result) {
     G: "I love you",
     H: "rock",
     I: "call me",
-    J: "Bang bang",
+    J: "Smile",
   };
   console.log(result[0].label);
   console.log(result)
