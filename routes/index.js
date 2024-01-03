@@ -6,5 +6,14 @@ router.get('/', function(req, res, next) {
   // res.render('sign', { title: 'Express' });
    res.render('sign');
 });
+router.get("/about", function (req, res, next) {
+  // res.render('sign', { title: 'Express' });
+  res.render("about");
+});
+router.get("/contact", function (req, res, next) {
+  // res.render('sign', { title: 'Express' });
+  res.render("contact");
+});
+
 
 module.exports = router;

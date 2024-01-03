@@ -4,35 +4,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/stylesheets/loginpage.css" />
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #c88ea7;
+            color: #000;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2f2e41;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #000;
+        }
+
+        .login-link {
+            margin-right: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .h1 {
+            font-family: "Libre Baskerville", serif;
+        }
+
+        .login-image {
+            flex: 1;
+            margin-right: 20px;
+            max-width: 700px;
+        }
+
+        .login-image img {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .h3 {
+            font: optional;
+        }
+
+        .login-form {
+            flex: 1;
+            max-width: 700px;
+            max-height: 1000px;
+            padding: 20px;
+        }
+
+        .login-form h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .login-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form label {
+            margin: 10px 0 5px;
+            color: #000;
+        }
+
+        .login-form input {
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .login-form button {
+            background-color: #c88ea7;
+            color: #fff;
+            padding: 15px 15px;
+            font-family: "Libre Baskerville", serif;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .login-options {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .login-options p {
+            margin-bottom: 20px;
+            color: #000;
+            text-align: center;
+        }
+
+        .login-options li {
+            list-style: none;
+            color: #c88ea7;
+        }
+
+        .color {
+            margin-bottom: 15px;
+            color: #c88ea7;
+            text-decoration: underline;
+        }
+
+        .color p {
+            color: #c88ea7;
+        }
+
+        .google-sign-in .google-button-container {
+            display: flex;
+            align-items: center;
+            font-family: "Libre Baskerville", serif;
+            margin-top: 20px;
+        }
+
+        .google-sign-in button {
+            background-color: #ffffff;
+            color: #c88ea7;
+            padding: 10px 10px;
+            font-size: 16px;
+            border: 1px solid #000;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+
+        .login-options p {
+            text-align: center;
+        }
+
+        .google-sign-in button:hover {
+            background-color: #ffffff;
+            border-color: #000;
+        }
+
+        .google-sign-in .google-logo {
+            margin-left: 10px;
+            border-color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            color: #c88ea7;
+        }
+
+        .form-input {
+            padding: 15px 15px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #c88ea7;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            color: #c88ea7;
+        }
+
+        .form-input button:hover {
+            border-color: #fff;
+            background-color: #ffffff;
+            color: #c88ea7;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social a {
+            text-decoration: none;
+            margin: 0 5px;
+            /* Adding margin between social links */
+        }
+
+        .social img {
+            flex: 1 1 100px;
+
+            margin: 10px;
+            text-align: center;
+            width: 50px;
+            /* Set the width */
+            height: auto;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background-color: #c88ea7;
+            width: 100%;
+            /* Adjusts the width to stretch */
+            padding: 0;
+            /* Remove padding from the footer */
+        }
+
+        .section {
+            flex: 1 1 300px;
+            max-width: 300px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .section p {
+            color: #000;
+        }
+
+        /* Customize icons */
+        .section span {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- <div class="steps">
-        <img src="/images/login.gif" class="img-fluid mb-20" alt="Responsive image" width="200%"/>
-    </div> -->
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li class="login-link"><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <div class="login-container">
+        <div class="login-image">
+            <img src="images/login.png" alt="Login Image">
+        </div>
+        <div class="login-form">
 
-    <!-- <form action="/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+            <form>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                </div>
+                <button type="submit">Login</button>
+            </form>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
 
-        <button type="submit">Login</button>
-    </form> -->
-    <form id="loginForm" action="/login" method="POST">
-        <h2>Login</h2>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+            <div class="google-sign-in">
+                <div class="google-button-container">
+                    <button>Sign in with Google<img class="google-logo" src="images/google.png"
+                            alt="Google Logo"></button>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+                </div>
+                <div className="login-options">
+                    <a href="/register">
+                        <p>Don't have an account?</p>
+                    </a>
 
-        <button type="submit">Login</button>
-        <p>New user? <a href="/register">signup</a></p>
-    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+    <footer class="footer">
+        <div class="section">
+            <h2>Gesture Sync</h2>
+            <p>We are here to help and connect with your loved ones.</p>
+
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/facebook.png" alt="facebook" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/insta.png" alt="insta" />
+                </a>
+                <a href="https://www.Twitter.com" target="_blank" rel="noopener noreferrer">
+                    <img src="images/twitter.png" alt="twitter" />
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p><span>&#9742;</span> 9800922532</p>
+            <p><span>&#9993;</span> contact@gesturesync.com</p>
+            <p><span>&#127758;</span> Nepal</p>
+        </div>
+        <div class="section">
+            <h2>About Us</h2>
+            <p>Support</p>
+            <p>Privacy & Policy</p>
+        </div>
 </body>
 
 </html>
