@@ -40,9 +40,39 @@
     }
 
     
-.landi{
+    @keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.landi-image {
+  max-width: 100%;
+  height: auto;
+  opacity: 0; /* Start with opacity 0 */
+  animation: slideDownAnimation 1s ease-in-out forwards; /* Animation for slide down */
+}
+
+@keyframes slideDownAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Move the element upward */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Element returns to its original position */
+  }
+}
+
+
+.landi {
   color: #c88ea7;
   text-align: center;
+  opacity: 0;
+  animation: fadeInAnimation 2s ease-in-out forwards 0.5s;
 }
 
       .social {
@@ -99,20 +129,21 @@
   </head>
   <body>
     <nav>
+      <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/profile">Profile</a></li>
-            <li class="login-link"><a href="/logout">Logout</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/lobby">Videochat</a></li>
+          <li class="login-link"><a href="/logout">Logout</a></li>
         </ul>
+      </nav>
     </nav>
     <div class="landi-container">
       <div class="landi-content">
-        <img
-          src="./images/landi.png"
-          alt="landi"
-          class="landi-image"
+        
+        <img class="landi-image animate__animated animate__slideInDown" src="images/landi.png" alt="landi Image" />
         />
         <div class="landi">
         <h1> Translating Hands to heart</h1>

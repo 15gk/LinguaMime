@@ -15,6 +15,13 @@ router.get("/contact", function (req, res, next) {
 router.get("/landing", function (req, res, next) {
   res.render("landing");
 });
+router.get("/lobby", function (req, res, next) {
+  res.render("lobby");
+});
+router.get("/videochat", function (req, res, next) {
+  res.render("videochat");
+});
+
 
 
 // router.get("/profile", function (req, res) {

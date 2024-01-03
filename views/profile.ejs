@@ -96,7 +96,10 @@
 
             border-radius: 50%;
             max-height: 700px;
+         
         }
+
+    
 
         .social {
             display: flex;
@@ -152,29 +155,32 @@
 </head>
 
 <body>
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/profile">Profile</a></li>
-        <li class="login-link"><a href="/logout">Logout</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/lobby">Videochat</a></li>
+            <li class="login-link"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-image">
                 <img class="profile-picture" src="images/profile.png" alt="Profile Picture">
             </div>
-            <h2 class="profile-name"><%= user.fullname %></h2>
-
-        </div>
-        <div class="profile-details">
-            <p>Username: <%= user.username %></p>
-            <p>Email: <%=user.email %></p>
-
-
-        </div>
+            <h2 class="profile-name">
+                <%= user.fullname %>
+            </h2>
+            
+            </div>
+            <div class="profile-details">
+                <p>Username: <%= user.username %>
+                </p>
+                <p>Email: <%=user.email %>
+                </p>
+            </div>
         <footer class="footer">
             <div class="section">
                 <h2>Gesture Sync</h2>
