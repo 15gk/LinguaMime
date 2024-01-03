@@ -79,7 +79,7 @@ app.post("/register", async function (req, res) {
     
       newUser = new User({
         email: req.body.email,
-        // fullname:req.body.fullname,
+        fullname:req.body.fullname,
         username: req.body.username,
         userId: userId,})
      
@@ -134,14 +134,7 @@ app.use(function (req, res, next) {
   We call 'isAuthenticated' to check if the request is 
   authenticated or not. 
 */
-app.get('/profile', function(req, res) {
-  console.log(req.session)
-  if (req.isAuthenticated()) {
-    res.json({ message: 'You made it to the secured profie' })
-  } else {
-    res.json({ message: 'You are not authenticated' })
-  }
-})
+
 function generateUserId(role, count) {
   return `00-${count}`;
 }

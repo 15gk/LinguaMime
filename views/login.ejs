@@ -260,10 +260,11 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li class="login-link"><a href="/login">Login</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li class="login-link"><a href="/logout">Logout</a></li>
         </ul>
     </nav>
     <div class="login-container">
@@ -272,8 +273,9 @@
         </div>
         <div class="login-form">
 
-            <form>
+            <form id="loginForm" action="/login" method="post">
                 <div class="form-group">
+                    <h1>Login</h1>
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" placeholder="Enter your username">
                 </div>
@@ -286,14 +288,14 @@
 
 
             <div class="google-sign-in">
-                <div class="google-button-container">
+                <!-- <div class="google-button-container">
                     <button>Sign in with Google<img class="google-logo" src="images/google.png"
                             alt="Google Logo"></button>
 
-                </div>
+                </div> -->
                 <div className="login-options">
                     <a href="/register">
-                        <p>Don't have an account?</p>
+                        <p>Don't have an account? SignUp</p>
                     </a>
 
 

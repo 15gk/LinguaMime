@@ -18,14 +18,56 @@
     <script src="libraries/p5.sound.js"></script>
     <script src="javascripts/script.js"></script>
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
-    <style></style>
+    <style>
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #c88ea7;
+      color: #000;
+      padding: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+    }
+
+    li {
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2f2e41;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #000;
+    }
+    </style>
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li class="login-link"><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
     <button type="button" placeholder="Train Model" name="train" id="train" onclick="beginTraining()"
         style="align-items: baseline;">Train</button>
     <div class="container-fluid">
-        <div class="container-fluid" style="width: 100%">
+        <div class="container-fluid" style="width: 70%">
             <div class="jumbotron">
                 <h3 class="display-4 heading">Gesturesync</h3>
                 <p class="lead" style="text-align: center">
